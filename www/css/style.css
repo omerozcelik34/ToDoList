@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lumanosimo', cursive;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2192FF, #00F5FF);
+    padding: 10px;
+    /** 2192FF 00F5FF */
+}
+
+.todolist{
+    width: 100%;
+    max-width: 540px;
+    border-radius: 20px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: pink;
+}
+
+.caption{
+    font-size: 20px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 100px;
+    margin: 70px auto 70px;
+    height: 57px;
+}
+
+#text-box{
+    border: none;
+    outline: none;
+    flex: 1;
+    margin-left: 20px;
+    font-size: 14px;
+    background: transparent;
+}
+
+.btn{
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    padding: 15px;
+    width: 135px;
+    min-height: 100%;
+    border-radius: 100px;
+    background-color: #fa8faf;
+    font-size: 17px;
+}
+
+ul li {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 15px;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    background-image: url("/www/img/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url("/www/img/checked.png");
+}
+
+ul li span {
+    position: absolute;
+    right: 0px;
+    top: 3px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: #edeef0;
+}
+
